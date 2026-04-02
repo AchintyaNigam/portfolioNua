@@ -13,7 +13,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="w-full bg-gradient-to-r from-sky-600 to-sky-800 text-white shadow-black drop-shadow-2xl">
+    <div className="w-full bg-gradient-to-r from-sky-600 to-sky-800 text-white text-bold shadow-black drop-shadow-2xl">
       <div className="flex items-center justify-between px-4 py-3 md:px-8">
         {/* Logo */}
         <Link href="/">
@@ -31,14 +31,14 @@ const Navbar = () => {
 
         {/* Nav links (Desktop) */}
         <div className="hidden md:flex space-x-8 text-cyan-100 font-bold">
-          <div className="text-button cursor-pointer">MUSIC</div>
+          <div className="text-button cursor-pointer tracking-widest">MUSIC</div>
           <div
-            className="text-button cursor-pointer"
+            className="text-button cursor-pointer tracking-widest"
             onClick={() => router.push("/coding")}
           >
-            CODING
+            DEVELOPMENT
           </div>
-          <div className="text-button cursor-pointer">LITERATURE</div>
+          <div className="text-button cursor-pointer tracking-widest">LITERATURE</div>
         </div>
       </div>
 

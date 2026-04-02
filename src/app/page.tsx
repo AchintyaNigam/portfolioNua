@@ -67,7 +67,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative h-screen overflow-scroll m-0">
+    <div className="relative h-screen overflow-scroll m-0 bg-gray-900">
       {/* AnimatePresence for Header */}
       <AnimatePresence>
         {showHeader && (

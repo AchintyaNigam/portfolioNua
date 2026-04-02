@@ -9,16 +9,13 @@ import LightningRod from '@/components/coding/LightningRod';
 
 const Profile = () => {
   return (
-    <div className='flex flex-row'>
-    <div className='pl-8 pt-8 flex lg:basis-1/3 '>
+    <div className='flex flex-row mb-8'>
+    <div className='pt-8 flex '>
       <div className=' lg:block hidden rounded-full overflow-hidden w-64 h-64 justify-center items-center m-8 border-4 border-blue-300 shadow-photo-glow'>
         <Image src={MeCoding} width={1000} height={1000} alt='Me Coding' className='object-cover'/>
       </div>
-        <div className='lg:hidden block h-full'>
-            <LightningRod />
-        </div>
     </div>
-    <div className='flex flex-col lg:basis-2/3 text-white p-10 justify-center '>
+    <div className='flex flex-col lg:basis-2/3 text-white p-10 pl-8 justify-center '>
       <div className="text-3xl font-mono mt-4 flex justify-between lg:w-28 w-32 lg:bg-blue-0 rounded-full  ">
                   <a className="hover:cursor-pointer image-button" href="https://www.instagram.com/achintya_nigam/?hl=en"><FaGithub size={40}/></a>
                   <a className="hover:cursor-pointer image-button" href="https://www.linkedin.com/in/achintya-nigam-5a1558251/"><FaLinkedin size={40}/></a>

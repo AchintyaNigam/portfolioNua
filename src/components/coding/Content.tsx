@@ -11,7 +11,7 @@ import { VideoText } from "@/components/magicui/video-text";
 
 const Content = () => {
   return (
-    <div className="z-100 bg-transparent h-full lg:w-[70vw] w-screen overflow-x-hidden pt-8 flex flex-col overflow-y-auto no-scrollbar">
+    <div className="px-10 z-100 bg-transparent h-full w-full w-screen overflow-x-hidden pt-8 flex flex-col overflow-y-auto no-scrollbar">
       <Particles
         className="absolute inset-0 z-0 mt-32"
         quantity={100}
@@ -27,16 +27,16 @@ const Content = () => {
           transition={{ duration: 0.2 }}
         >
           <div className="lg:block hidden">
-            <h1 className="relative lg:h-[30vh] h-[10vh] w-full overflow-visible lg:-ml-72 -ml-16">
+            <h1 className="relative lg:h-[30vh] h-[10vh] w-full overflow-visible">
               <VideoText src="videos/abstractBlue.mp4" fontSize={12}>
-                CODING
+                DEVELOPMENT
               </VideoText>
             </h1>
           </div>
           <div className="lg:hidden block">
-            <h1 className="relative lg:h-[30vh] h-[10vh] w-full overflow-visible lg:-ml-72 -ml-4">
+            <h1 className="relative lg:h-[30vh] h-[10vh] w-full overflow-visible">
               <VideoText src="videos/abstractBlue.mp4" fontSize={20}>
-                CODING
+                DEVELOPMENT
               </VideoText>
             </h1>
           </div>
