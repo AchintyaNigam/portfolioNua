@@ -33,13 +33,6 @@ const Content = () => {
               </VideoText>
             </h1>
           </div>
-          <div className="lg:hidden block">
-            <h1 className="relative lg:h-[30vh] h-[10vh] w-full overflow-visible">
-              <VideoText src="videos/abstractBlue.mp4" fontSize={20}>
-                DEVELOPMENT
-              </VideoText>
-            </h1>
-          </div>
         </motion.div>
 
         <Profile />
