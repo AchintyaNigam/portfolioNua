@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-4 py-3 md:px-8">
         {/* Logo */}
         <Link href="/">
-          <div className="p-0 bg-black rounded-full w-14 h-14 flex items-center justify-center m-1 overflow-hidden">
+          <div className="p-0 image-button bg-black rounded-full w-14 h-14 flex items-center justify-center m-1 overflow-hidden">
             <Image src={LogoImage} alt="logo" width={56} height={56} />
           </div>
         </Link>
@@ -31,14 +31,18 @@ const Navbar = () => {
 
         {/* Nav links (Desktop) */}
         <div className="hidden md:flex space-x-8 text-cyan-100 font-bold">
-          <div className="text-button cursor-pointer tracking-widest">MUSIC</div>
+          <div 
+          className="text-button cursor-pointer tracking-[.20em]"
+          onClick={() => router.push("/music")}>MUSIC</div>
           <div
-            className="text-button cursor-pointer tracking-widest"
+            className="text-button cursor-pointer tracking-[.20em]"
             onClick={() => router.push("/coding")}
           >
             DEVELOPMENT
           </div>
-          <div className="text-button cursor-pointer tracking-widest">LITERATURE</div>
+          <div 
+          className="text-button cursor-pointer tracking-[.20em]"
+          onClick={() => router.push("/literature")}>LITERATURE</div>
         </div>
       </div>
 
@@ -68,7 +72,7 @@ const Navbar = () => {
                 setMenuOpen(false);
               }}
             >
-              CODING
+              DEVELOPMENT 
             </motion.div>
             <motion.div
               initial={{ y: -10, opacity: 0 }}

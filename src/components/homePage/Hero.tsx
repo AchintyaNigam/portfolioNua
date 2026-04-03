@@ -127,16 +127,23 @@ const Hero = ({ handleScrollDownClick }: { handleScrollDownClick: () => void }) 
           <h1 id="space">&nbsp;</h1>
           <h1 id="h2">NIGAM</h1>
         </div>
-
-        <div className="lg:text-3xl font-mono mt-4 sm:text-xl">
-          Musician, Developer, Author
+        <div className="flex flex-row justify-center items-center w-full">
+          <div className="lg:text-3xl font-mono px-4 mt-4 sm:text-xl">
+            Musician
+          </div>
+          <div className="lg:text-3xl font-mono px-4 mt-4 sm:text-xl">
+            Developer
+          </div>
+          <div className="lg:text-3xl font-mono px-4 mt-4 sm:text-xl">
+            Author
+          </div>
         </div>
 
         <Socials />
       </div>
 
-      <div className="text-2xl -mt-32 flex flex-col items-center text-white">
-        Scroll Down
+      <div className="lg:text-2xl text-lg -mt-32 flex flex-col items-center text-white">
+        S C R O L L&nbsp;&nbsp; D O W N
         <div className="hover:cursor-pointer pt-2" onClick={() => handleScrollDownClick()}>
           <IoIosArrowDropdownCircle />
         </div>
