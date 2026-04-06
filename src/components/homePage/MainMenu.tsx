@@ -19,7 +19,7 @@ const [hoveredColumn, setHoveredColumn] = useState<number | null>(null);
       title: 'Development',
       subtitle: 'Learn about my projects and my work experience',
       color: 'from-blue-600 to-cyan-600',
-      link: '/coding',
+      link: '/development',
       gif: '/videos/cat.gif'
     },
     {

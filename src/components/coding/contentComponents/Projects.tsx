@@ -5,7 +5,8 @@ import SubHeading from "@/components/coding/SubHeading";
 const Projects = () => {
   return (
     <div className="flex flex-col text-white mb-8">
-      <SubHeading text="Projects" />
+    lwerkwoicnkehjwnv rthnv erj 
+    fv ewrv wme[private r elevation: r vr
     </div>
   );
 };

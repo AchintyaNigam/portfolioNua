@@ -9,7 +9,6 @@ import ExperienceDescriptor from "@/components/coding/contentComponents/Experien
 const Experience = () => {
   return (
     <div className="flex flex-col text-white mb-8">
-        <SubHeading text="Experience" />
       <div className="flex flex-row mt-8">
         <div className="flex items-stretch">
           <LightningRod />

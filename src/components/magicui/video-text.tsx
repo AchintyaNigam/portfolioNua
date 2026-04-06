@@ -4,68 +4,25 @@ import { cn } from "@/lib/utils";
 import React, { ElementType, ReactNode, useEffect, useState } from "react";
 
 export interface VideoTextProps {
-  /**
-   * The video source URL
-   */
   src: string;
-  /**
-   * Additional className for the container
-   */
+  imageSrc: string;
   className?: string;
-  /**
-   * Whether to autoplay the video
-   */
   autoPlay?: boolean;
-  /**
-   * Whether to mute the video
-   */
   muted?: boolean;
-  /**
-   * Whether to loop the video
-   */
   loop?: boolean;
-  /**
-   * Whether to preload the video
-   */
   preload?: "auto" | "metadata" | "none";
-  /**
-   * The content to display (will have the video "inside" it)
-   */
   children: ReactNode;
-  /**
-   * Font size for the text mask (in viewport width units)
-   * @default 10
-   */
   fontSize?: string | number;
-  /**
-   * Font weight for the text mask
-   * @default "bold"
-   */
   fontWeight?: string | number;
-  /**
-   * Text anchor for the text mask
-   * @default "middle"
-   */
   textAnchor?: string;
-  /**
-   * Dominant baseline for the text mask
-   * @default "middle"
-   */
   dominantBaseline?: string;
-  /**
-   * Font family for the text mask
-   * @default "sans-serif"
-   */
   fontFamily?: string;
-  /**
-   * The element type to render for the text
-   * @default "div"
-   */
   as?: ElementType;
 }
 
 export function VideoText({
   src,
+  imageSrc,
   children,
   className = "",
   autoPlay = true,
@@ -79,38 +36,99 @@ export function VideoText({
   fontFamily = "sans-serif",
   as: Component = "div",
 }: VideoTextProps) {
-  const [svgMask, setSvgMask] = useState("");
+  const [fillMask, setFillMask] = useState("");
+  const [strokeMask, setStrokeMask] = useState("");
+
   const content = React.Children.toArray(children).join("");
 
   useEffect(() => {
-    const updateSvgMask = () => {
+    const updateMasks = () => {
       const responsiveFontSize =
         typeof fontSize === "number" ? `${fontSize}vw` : fontSize;
-      const newSvgMask = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><text x='50%' y='50%' font-size='${responsiveFontSize}' font-weight='${fontWeight}' text-anchor='${textAnchor}' dominant-baseline='${dominantBaseline}' font-family='${fontFamily}' fill='transparent' stroke='white' stroke-width='2' paint-order='stroke'>${content}</text></svg>`;
-      setSvgMask(newSvgMask);
+
+      // 🪙 FILL MASK (solid text)
+      const fillSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>
+        <text 
+          x='50%' 
+          y='50%' 
+          font-size='${responsiveFontSize}' 
+          font-weight='${fontWeight}' 
+          text-anchor='${textAnchor}' 
+          dominant-baseline='${dominantBaseline}' 
+          font-family='${fontFamily}' 
+          fill='white'
+        >
+          ${content}
+        </text>
+      </svg>`;
+
+      // 🎬 STROKE MASK (outline only)
+      const strokeSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>
+        <text 
+          x='50%' 
+          y='50%' 
+          font-size='${responsiveFontSize}' 
+          font-weight='${fontWeight}' 
+          text-anchor='${textAnchor}' 
+          dominant-baseline='${dominantBaseline}' 
+          font-family='${fontFamily}' 
+          fill='transparent'
+          stroke='white'
+          stroke-width='5'
+          paint-order='stroke'
+        >
+          ${content}
+        </text>
+      </svg>`;
+
+      setFillMask(fillSvg);
+      setStrokeMask(strokeSvg);
     };
 
-    updateSvgMask();
-    window.addEventListener("resize", updateSvgMask);
-    return () => window.removeEventListener("resize", updateSvgMask);
+    updateMasks();
+    window.addEventListener("resize", updateMasks);
+    return () => window.removeEventListener("resize", updateMasks);
   }, [content, fontSize, fontWeight, textAnchor, dominantBaseline, fontFamily]);
 
-  const dataUrlMask = `url("data:image/svg+xml,${encodeURIComponent(svgMask)}")`;
+  const fillMaskUrl = `url("data:image/svg+xml,${encodeURIComponent(fillMask)}")`;
+  const strokeMaskUrl = `url("data:image/svg+xml,${encodeURIComponent(strokeMask)}")`;
 
   return (
-    <Component className={cn(`relative size-full`, className)}>
-      {/* Create a container that masks the video to only show within text */}
+    <Component className={cn("relative size-full overflow-hidden", className)}>
+
+      {/* 🪙 Metallic Fill Layer */}
       <div
-        className="absolute inset-0 flex"
+        className="absolute inset-0 bg-sky-800"
         style={{
-          maskImage: dataUrlMask,
-          WebkitMaskImage: dataUrlMask,
+          maskImage: fillMaskUrl,
+          WebkitMaskImage: fillMaskUrl,
           maskSize: "contain",
           WebkitMaskSize: "contain",
           maskRepeat: "no-repeat",
           WebkitMaskRepeat: "no-repeat",
           maskPosition: "center",
-          WebkitMaskPosition: "left",
+          WebkitMaskPosition: "center",
+          filter: "contrast(140%) brightness(120%)",
+      }}
+      >
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="shine-layer" />
+        </div>
+      </div>
+
+
+      {/* 🎬 Video Outline Layer */}
+      <div
+        className="absolute inset-0"
+        style={{
+          maskImage: strokeMaskUrl,
+          WebkitMaskImage: strokeMaskUrl,
+          maskSize: "contain",
+          WebkitMaskSize: "contain",
+          maskRepeat: "no-repeat",
+          WebkitMaskRepeat: "no-repeat",
+          maskPosition: "center",
+          WebkitMaskPosition: "center",
         }}
       >
         <video
@@ -126,7 +144,7 @@ export function VideoText({
         </video>
       </div>
 
-      {/* Add a backup text element for SEO/accessibility */}
+      {/* Accessibility fallback */}
       <span className="sr-only">{content}</span>
     </Component>
   );

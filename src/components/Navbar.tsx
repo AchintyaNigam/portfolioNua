@@ -36,7 +36,7 @@ const Navbar = () => {
           onClick={() => router.push("/music")}>MUSIC</div>
           <div
             className="text-button cursor-pointer tracking-[.20em]"
-            onClick={() => router.push("/coding")}
+            onClick={() => router.push("/development")}
           >
             DEVELOPMENT
           </div>
