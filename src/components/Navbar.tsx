@@ -13,11 +13,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="w-full bg-gradient-to-r from-sky-600 to-sky-800 text-white text-bold shadow-black drop-shadow-2xl">
-      <div className="flex items-center justify-between px-4 py-3 md:px-8">
+    <div className="z-100 w-full bg-gradient-to-r lg:px-32 px-4 from-sky-600 to-sky-800 text-white text-bold shadow-black drop-shadow-2xl">
+      <div className="flex items-center justify-between lg:px-0 px-4 py-3 ">
         {/* Logo */}
         <Link href="/">
-          <div className="p-0 image-button bg-black rounded-full w-14 h-14 flex items-center justify-center m-1 overflow-hidden">
+          <div className="p-0 image-button bg-black rounded-full w-14 h-14 flex items-center justify-center overflow-hidden">
             <Image src={LogoImage} alt="logo" width={56} height={56} />
           </div>
         </Link>

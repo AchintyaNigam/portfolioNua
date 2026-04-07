@@ -47,7 +47,7 @@ export function VideoText({
         typeof fontSize === "number" ? `${fontSize}vw` : fontSize;
 
       // 🪙 FILL MASK (solid text)
-      const fillSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>
+      const fillSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='0%' height='0%'>
         <text 
           x='50%' 
           y='50%' 
@@ -55,8 +55,8 @@ export function VideoText({
           font-weight='${fontWeight}' 
           text-anchor='${textAnchor}' 
           dominant-baseline='${dominantBaseline}' 
-          font-family='${fontFamily}' 
-          fill='white'
+          font-family='${fontFamily}'
+          letter-spacing='10'
         >
           ${content}
         </text>
@@ -72,10 +72,10 @@ export function VideoText({
           text-anchor='${textAnchor}' 
           dominant-baseline='${dominantBaseline}' 
           font-family='${fontFamily}' 
-          fill='transparent'
           stroke='white'
           stroke-width='5'
           paint-order='stroke'
+          letter-spacing='8'
         >
           ${content}
         </text>

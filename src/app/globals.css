@@ -126,6 +126,11 @@
   }
 }
 
+.shape-circle {
+  shape-outside: circle(50%);
+  -webkit-shape-outside: circle(50%);
+}
+
 .shine-layer {
   width: 200%;
   height: 100%;

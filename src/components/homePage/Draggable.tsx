@@ -4,7 +4,7 @@ import Image from "next/image";
 import DraggablePhoto from "../../../public/draggableMe.png";
 
 const DraggableMe = () => {
-  const [position, setPosition] = useState({ x: 100, y: 100 }); // Initial position
+  const [position, setPosition] = useState({ x: 100, y: 150 }); // Initial position
   const [isDragging, setIsDragging] = useState(false);
   const [dragCount, setDragCount] = useState(0);
   const [isActive, setIsActive] = useState(false);
