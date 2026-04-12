@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { ChevronDown } from 'lucide-react';
 
 import SubHeading from "@/components/coding/SubHeading";
@@ -65,6 +65,9 @@ const Content = () => {
     });
   };
 
+  const { scrollYProgress } = useScroll({ container: containerRef, });
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  
   return (
     <div
       ref={containerRef}
@@ -78,26 +81,30 @@ const Content = () => {
         refresh
       />
 
-      <div className="z-10 pb-28">
+      <div className="absolute inset-0 mt-18 w-screen">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.2 }}
+          style = {{opacity}}
         >
-          <div className="lg:block hidden">
-            <h1 className="relative lg:h-[30vh] h-[10vh] w-full opacity-80">
-              <VideoText
-                src="videos/abstractBlue.mp4"
-                imageSrc="metallicTexture.png"
-                fontSize={8}
-              >
+        <div className="lg:block hidden">
+           <h1 className="relative lg:h-[30vh] h-[10vh] w-full opacity-80">
+             <VideoText
+               src="videos/abstractBlue.mp4"
+               imageSrc="metallicTexture.png"
+               fontSize={8}
+               >
                 DEVELOPMENT
-              </VideoText>
-            </h1>
-          </div>
+             </VideoText>
+           </h1>
+        </div>
         </motion.div>
-
+      </div>
+      <div className="z-10 pb-28">
+        <div className="lg:mt-44">
         <Profile />
+        </div>
 
         <div className="text-white w-full space-y-4 lg:block hidden">
           {sections.map((section) => {

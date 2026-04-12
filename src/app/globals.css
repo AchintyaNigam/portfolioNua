@@ -126,6 +126,27 @@
   }
 }
 
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .shape-circle {
   shape-outside: circle(50%);
   -webkit-shape-outside: circle(50%);
