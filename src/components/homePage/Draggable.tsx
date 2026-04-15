@@ -4,7 +4,7 @@ import Image from "next/image";
 import DraggablePhoto from "../../../public/draggableMe.png";
 
 const DraggableMe = () => {
-  const [position, setPosition] = useState({ x: 100, y: 150 }); // Initial position
+  const [position, setPosition] = useState({ x: 120, y: 100 }); // Initial position
   const [isDragging, setIsDragging] = useState(false);
   const [dragCount, setDragCount] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -50,7 +50,7 @@ const DraggableMe = () => {
 
   return (
     <div
-        className={` absolute bg-transparent w-64 h-64 lg:flex border-8 border-transparent items-center justify-center rounded-full cursor-grab transition-transform duration-100 hover:border-8 hover:border-solid hover:border-blue-400 
+        className={` absolute bg-transparent w-54 h-54 lg:flex border-8 border-transparent items-center justify-center rounded-full cursor-grab transition-transform duration-100 hover:border-8 hover:border-solid hover:border-blue-400 
                 hidden    
           ${
         isActive ? "scale-125 cursor-grabbing shadow-draggable-me" : ""
@@ -64,8 +64,8 @@ const DraggableMe = () => {
       <Image
         src={DraggablePhoto}
         alt="DraggableMe"
-        width={500}
-        height={500}
+        width={400}
+        height={400}
         draggable={false} // Prevent default browser dragging of the image
         className="object-fill rounded-full"
       />

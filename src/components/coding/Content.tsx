@@ -71,7 +71,7 @@ const Content = () => {
   return (
     <div
       ref={containerRef}
-      className="lg:px-32 p-8 bg-transparent h-full w-full overflow-y-auto no-scrollbar flex flex-col pt-8"
+      className="lg:px-32 p-8 bg-transparent h-full w-full overflow-y-auto no-scrollbar  flex flex-col pt-8"
     >
       <Particles
         className="absolute inset-0 z-0 pointer-events-none mt-32"

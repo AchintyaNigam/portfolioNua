@@ -9,7 +9,6 @@ import {
 import ProjectCard from "@/components/coding/contentComponents/ProjectCard"
 import { Backlight } from "@/components/ui/backlight"
 
-
 import SubHeading from "@/components/coding/SubHeading";
 const Projects = () => {
   const projects = [
@@ -30,12 +29,13 @@ const Projects = () => {
     mediaSrc: "/metallicTexture.png",
   },
 ];
+
 return (
-    <div className="flex flex-col text-white mb-8 w-full lg:p-18 p-8 overflow-hidden">
+    <div className="flex flex-col text-white mb-8 w-full lg:p-18 p-6 overflow-visible">
       <Carousel className="w-full h-full">
         <CarouselContent >
           {projects.map((project) => (
-            <CarouselItem className="cursor-grab " key={project.id}>
+            <CarouselItem className="not-first:ml-8" key={project.id} >
             <Backlight>
               <ProjectCard project={project} />
             </Backlight> 

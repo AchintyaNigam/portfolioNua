@@ -68,7 +68,7 @@ const Navbar = () => {
               transition={{ duration: 0.1, delay: 0.1 }}
               className="text-button cursor-pointer"
               onClick={() => {
-                router.push("/coding");
+                router.push("/development");
                 setMenuOpen(false);
               }}
             >
