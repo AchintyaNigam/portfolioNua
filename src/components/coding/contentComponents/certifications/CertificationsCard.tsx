@@ -9,9 +9,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-const CertificationsCard = ({certBadgeImgSrc, certImgSrc }; {certBadgeImgSrc: string, certImgSrc: string}) => {
+const CertificationsCard = ({certBadgeImgSrc, certImgSrc }: {certBadgeImgSrc: string, certImgSrc: string}) => {
   return (
-    <div></div>
+    <div className="h-full w-full">
+
+    </div>
   )
 }
 
