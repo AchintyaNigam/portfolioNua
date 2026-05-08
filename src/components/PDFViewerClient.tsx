@@ -9,10 +9,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 const PDFViewerClient = ({pdfSrc} : {pdfSrc : string}) => {
-  const [numPages, setNumPages] = useState(null);
+  const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const onDocumentLoadSuccess = ({ numPages }) => {
+  const onDocumentLoadSuccess = ({ numPages } : {numPages : number}) => {
     setNumPages(numPages);
   };
 

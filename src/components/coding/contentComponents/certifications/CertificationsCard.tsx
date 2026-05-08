@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import PDFViewer from '@/components/PDFViewer';
 import {
   Dialog,
   DialogClose,
@@ -9,10 +10,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-const CertificationsCard = ({certBadgeImgSrc, certImgSrc }: {certBadgeImgSrc: string, certImgSrc: string}) => {
+const CertificationsCard = ({certBadgeImgSrc, pdfSrc }: {certBadgeImgSrc: string, pdfSrc: string}) => {
   return (
     <div className="h-full w-full">
-
+      <PDFViewer pdfSrc="/Certifications/pdfs/AWSCP.pdf" />
     </div>
   )
 }
