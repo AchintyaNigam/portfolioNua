@@ -1,5 +1,6 @@
 "use client";
 
+import {DashRing} from "@/components/loading-ui/dash-ring";
 import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
@@ -53,13 +54,14 @@ const PDFViewerClient = ({
       ref={containerRef}
       className="w-full h-full overflow-auto p-4"
     >
+    
       <div className="flex justify-center">
         <Document
           file={pdfSrc}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={
-            <div className="p-8 text-center text-white">
-              Loading PDF...
+            <div className="flex lg:h-[60vh] h-[30vh] w-full items-center justify-center p-8">
+              <DashRing className="lg:size-20 size-5 text-white" />
             </div>
           }
           error={

@@ -38,7 +38,7 @@ const CertificationsCard = ({
           className="
             !w-[95vw]
             !max-w-6xl
-            h-[90vh]
+            lg:h-[90vh]
             p-0
             bg-blue-700/90
             text-white

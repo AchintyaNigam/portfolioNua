@@ -1,5 +1,4 @@
 import CertificationsCard from '@/components/coding/contentComponents/certifications/CertificationsCard'
-
 const certifications = [
   {
     title: "AWS Cloud Practitioner",

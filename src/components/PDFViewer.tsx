@@ -1,19 +1,12 @@
 "use client";
 import dynamic from "next/dynamic";
-// import PDFViewerClient from '@/components/PDFViewerClient'; 
+import {DashRing} from "@/components/loading-ui/dash-ring";
 // Dynamically import the PDF viewer client component.
 const PDFViewerClient = dynamic(() => import("./PDFViewerClient"), {
   ssr: false,
   loading: () => (
-    <div
-      style={{
-        padding: "2rem",
-        textAlign: "center",
-        fontSize: "1.2rem",
-        color: "#333",
-      }}
-    >
-      Loading PDF Viewer...
+    <div className="lg:h-[60vh] h-[30vh] w-full flex justify-center items-center">
+    <DashRing className="lg:size-20 size-5 text-white" />
     </div>
   ),
 });
