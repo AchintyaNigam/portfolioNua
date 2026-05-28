@@ -82,8 +82,8 @@ const Content = () => {
         refresh
       />
 
-      <div className="absolute inset-0 mt-18 w-screen">
-        <motion.div
+      {/*   <div className="absolute inset-0 mt-18 w-screen">
+              <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.2 }}
@@ -94,16 +94,16 @@ const Content = () => {
              <VideoText
                src="videos/abstractBlue.mp4"
                imageSrc="metallicTexture.png"
-               fontSize={8}
+               fontSize={5}
                >
-                DEVELOPMENT
+                SECURITY AND ENGINEERING
              </VideoText>
            </h1>
         </div>
         </motion.div>
-      </div>
+      </div> */}
       <div className="z-10 pb-28">
-        <div className="lg:mt-44">
+        <div className="lg:mt-18">
         <Profile />
         </div>
 

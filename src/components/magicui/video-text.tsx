@@ -56,7 +56,7 @@ export function VideoText({
           text-anchor='${textAnchor}' 
           dominant-baseline='${dominantBaseline}' 
           font-family='${fontFamily}'
-          letter-spacing='10'
+          letter-spacing='9'
         >
           ${content}
         </text>

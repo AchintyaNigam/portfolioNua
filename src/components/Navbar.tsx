@@ -36,9 +36,9 @@ const Navbar = () => {
           onClick={() => router.push("/music")}>MUSIC</div>
           <div
             className="text-button cursor-pointer tracking-[.20em]"
-            onClick={() => router.push("/development")}
+            onClick={() => router.push("/secAndEng")}
           >
-            DEVELOPMENT
+            SECURITY & ENGINEERING
           </div>
           <div 
           className="text-button cursor-pointer tracking-[.20em]"
@@ -68,11 +68,11 @@ const Navbar = () => {
               transition={{ duration: 0.1, delay: 0.1 }}
               className="text-button cursor-pointer"
               onClick={() => {
-                router.push("/development");
+                router.push("/secAndEng");
                 setMenuOpen(false);
               }}
             >
-              DEVELOPMENT 
+              SECURITY & ENGINEERING 
             </motion.div>
             <motion.div
               initial={{ y: -10, opacity: 0 }}
