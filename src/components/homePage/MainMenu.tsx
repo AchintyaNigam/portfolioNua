@@ -16,10 +16,10 @@ const [hoveredColumn, setHoveredColumn] = useState<number | null>(null);
     },
     {
       id: 2,
-      title: 'Development',
-      subtitle: 'Learn about my projects and my work experience',
+      title: 'Security & Engineering',
+      subtitle: 'Learn about my work',
       color: 'from-blue-600 to-cyan-600',
-      link: '/secAndEng',
+      link: '/security-engineering',
       gif: '/videos/cat.gif'
     },
     {
