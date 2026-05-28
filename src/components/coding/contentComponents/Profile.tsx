@@ -25,13 +25,13 @@ const Profile = () => {
       <h1 className='lg:text-7xl text-4xl font-bold pt-4'>Achintya Nigam</h1>
       <h2 className='py-4 lg:text-2xl text-xl text-gray-400'>Mumbai, India</h2>
         <ul className="font-mono text-white lg:text-xl text-sm'">
-          <li>&#8226; Cybersecurity researcher and developer</li>
+          <li>&#8226; Cryptography researcher and developer</li>
           <li>&#8226; IEEE Access published, post-quantum cryptography</li>
           <li>&#8226; Cloud security, SOC operations, full-stack development</li>
         </ul>
       <p className='font-mono lg:text-xl text-sm'>
         <br />
-        I'm a cybersecurity professional heading to MTU Cork for my MSc, with a background that spans security research, software development, and hands-on threat detection. During my bachelors, I published research on post-quantum cryptography in IEEE Access and presented at Kaigi 25 hosted at IIT Bombay, work exploring how next-generation encryption can run efficiently on constrained devices. I've also worked as a developer at a Xlancr, which gave me a real appreciation for how systems are built and, more importantly, how they fail. These days I'm focused on cloud security and defensive operations, and I believe the best security professionals understand both how to build things and how to break them.      </p>
+        I'm a cryptography researcher and full-stack developer heading to MTU Cork for my MSc, with a background that spans security research, software development, and hands-on threat detection. During my bachelors, I published research on post-quantum cryptography in IEEE Access and presented at Kaigi 25 hosted at IIT Bombay, work exploring how next-generation encryption can run efficiently on constrained devices. I've also worked as a developer at a Xlancr, which gave me a real appreciation for how systems are built and, more importantly, how they fail. These days I'm focused on cloud security and defensive operations, and I believe the best security professionals understand both how to build things and how to break them.      </p>
     </div>
   </div>
   );
