@@ -1,20 +1,61 @@
 import React from 'react';
 
-const ExperienceDescriptor = ({title, company, date, description} : {title: string, company: string, date: string, description: string}) => {
+interface ExperienceDescriptorProps {
+  title: string;
+  company: string;
+  date: string;
+  description: string;
+}
+
+const ExperienceDescriptor = ({
+  title,
+  company,
+  date,
+  description,
+}: ExperienceDescriptorProps) => {
   return (
-    <div className='flex flex-col p-4 ml-8'>
-        <h1 className='lg:text-5xl text-2xl font-bold'>{title}</h1>
-        <div className='lg:flex hidden flex-row justify-between py-4'>
-            <h2 className='lg:text-3xl text-xl font-bold text-slate-400'>{company}</h2>
-            <h2 className='lg:text-3xl text-xl font-bold'>{date}</h2>
-        </div>
-        <div className='lg:hidden flex flex-col justify-between py-4'>
-            <h2 className='lg:text-3xl text-xl font-bold text-slate-400'>{company}</h2>
-            <h2 className='lg:text-3xl text-xl font-bold'>{date}</h2>
-        </div>
-        <p className='font-mono lg:text-xl text-sm'>{description}</p>
+    <div
+      className="
+        p-6
+        rounded-2xl
+        hover:shadow-blue-500/10
+        transition-all
+        duration-300
+      "
+    >
+      {/* Title */}
+      <h1 className="text-2xl lg:text-3xl font-bold text-blue-300">
+        {title}
+      </h1>
+
+      {/* Company + Date */}
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mt-3 gap-2">
+        <h2 className="text-lg lg:text-xl font-semibold text-slate-300">
+          {company}
+        </h2>
+
+        <span
+          className="
+            w-fit
+            px-3 py-1
+            rounded-full
+            text-sm
+            border
+            border-blue-400/20
+            bg-blue-500/10
+            text-blue-300
+          "
+        >
+          {date}
+        </span>
+      </div>
+
+      {/* Description */}
+      <p className="mt-5 text-sm lg:text-lg font-mono text-gray-300 leading-relaxed">
+        {description}
+      </p>
     </div>
   );
-}
+};
 
 export default ExperienceDescriptor;

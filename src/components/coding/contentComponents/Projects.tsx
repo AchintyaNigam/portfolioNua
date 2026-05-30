@@ -31,7 +31,7 @@ const Projects = () => {
 ];
 
 return (
-    <div className="flex flex-col text-white mb-8 w-full lg:p-18 p-6 overflow-visible">
+    <div className="flex flex-col text-white mb-8 w-full lg:p-18 p-6 lg:overflow-visible">
       <Carousel className="w-full h-full">
         <CarouselContent >
           {projects.map((project) => (

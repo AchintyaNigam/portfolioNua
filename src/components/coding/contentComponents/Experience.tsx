@@ -13,7 +13,7 @@ const Experience = () => {
         <div className="flex items-stretch">
           <LightningRod />
         </div>
-        <div className="flex flex-col">
+        <div className="pl-12 flex flex-col">
           <ExperienceDescriptor
             title="Junior Software Developer"
             company="Xlancr"

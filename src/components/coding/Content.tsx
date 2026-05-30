@@ -8,6 +8,7 @@ import Profile from "@/components/coding/contentComponents/Profile";
 import Experience from "@/components/coding/contentComponents/Experience";
 import Projects from "@/components/coding/contentComponents/Projects";
 import Certifications from "@/components/coding/contentComponents/Certifications";
+import Education from "@/components/coding/contentComponents/Education";
 
 import { Particles } from "@/components/magicui/particles";
 import { VideoText } from "@/components/magicui/video-text";
@@ -16,7 +17,7 @@ const sections = [
   { id: "projects", title: "Projects", content: <Projects /> },
   { id: "experience", title: "Experience", content: <Experience /> },
   { id: "certifications", title: "Certifications", content: <Certifications /> },
-  { id: "education", title: "Education", content: <Experience /> },
+  { id: "education", title: "Education", content: <Education /> },
 ];
 
 const Content = () => {
