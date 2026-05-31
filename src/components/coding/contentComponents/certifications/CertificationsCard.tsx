@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import {FaDownload} from 'react-icons/fa'
 import PDFViewer from '@/components/PDFViewer'
 
 import {
@@ -47,8 +48,29 @@ const CertificationsCard = ({
           "
         >
           <DialogHeader className="p-6 pb-2 shrink-0">
+            <div className="flex flex-row gap-3 items-center">
+
             <DialogTitle className="text-2xl">{title}</DialogTitle>
-        
+            <a
+            href={pdfSrc}
+            download
+            className="
+              flex items-center gap-3
+              justify-center
+              px-6 py-3
+              rounded-xl
+              border border-white/20
+              bg-white/5
+              backdrop-blur-sm
+              hover:bg-white/10
+              hover:scale-105
+              transition-all duration-300
+              font-semibold
+            "
+          >
+            <FaDownload />
+          </a>
+          </div>
             <DialogDescription className="text-white">
             {description}
             </DialogDescription>

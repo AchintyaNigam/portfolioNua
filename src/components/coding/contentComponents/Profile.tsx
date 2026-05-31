@@ -117,7 +117,7 @@ const Profile = () => {
         <div className="flex flex-wrap gap-4 mt-8">
 
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:achintyanigam2@gmail.com"
             className="
               flex items-center gap-3
               justify-center

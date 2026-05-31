@@ -5,7 +5,7 @@ const educationData = [
       "degree": "MSc Cybersecurity",
       "institution": "Munster Technological University",
       "location": "Cork, Ireland",
-      "duration": "2027 - 2028",
+      "duration": "2026 - 2027",
       "description": "Specializing in cybersecurity, cloud security, and defensive operations."
     },
     {
