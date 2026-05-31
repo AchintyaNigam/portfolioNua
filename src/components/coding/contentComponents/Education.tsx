@@ -30,9 +30,9 @@ const Education = () => {
             key={index}
             className="
               relative
-              pl-8
-              ml-4
-              w-[80vw]
+              lg:pl-8
+              pl-4
+              w-[82vw]
             "
           >
             <div
@@ -41,7 +41,6 @@ const Education = () => {
                 border-white/10
                 rounded-xl
                 p-6
-                hover:border-blue-400/40
                 transition-all
                 duration-300
               "

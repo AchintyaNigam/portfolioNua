@@ -61,22 +61,51 @@ const ProjectCard = ({ project }: { project: any }) => {
             </div>
               
               {/* Description */}
-              <div className="w-1/3 lg:flex hidden items-center text-white/70 text-sm bg-black rounded-xl p-8">
-                {project.description}
+              <div className="w-1/3 lg:flex flex-col hidden text-black text-sm bg-white/40 rounded-xl border border-white/10 p-6">
+            <p className="text-black text-sm leading-relaxed pb-2">
+              {project.description}
+            </p>
+            {project.details && (
+              <div className="border-t border-white pt-4">
+                <p className="text-xs font-bold uppercase tracking-widest text-blue-900 mb-1">
+                  Details
+                </p>
+                <p className="text-black text-sm leading-relaxed">
+                  {project.details}
+                </p>
               </div>
-              <Dialog>
-              <DialogTrigger className="lg:hidden block">Learn More</DialogTrigger>
-                <DialogContent className="bg-blue-700 opacity-90 text-white">
-                  <DialogHeader >
-                    <DialogTitle >Info</DialogTitle>
-                    <DialogDescription>
-                      <div className="flex lg:hidden items-center text-white/70 text-sm bg-black rounded-xl p-8">
-                        {project.description}
+            )}
+              </div>
+          {/* Mobile: Learn More dialog */}
+          <Dialog>
+            <DialogTrigger className="lg:hidden flex items-center justify-center rounded-xl border border-blue-500 bg-blue-500 text-black-300 text-sm font-medium px-4 py-2.5 hover:bg-blue-500/20 transition-colors">
+              Learn More
+            </DialogTrigger>
+            <DialogContent className="bg-[#0d1525] border border-blue-500/30 text-white rounded-2xl">
+              <DialogHeader>
+                <DialogTitle className="text-white text-lg font-bold">
+                  {project.title}
+                </DialogTitle>
+                <DialogDescription>
+                  <div className="space-y-4 mt-2">
+                    <p className="text-white/60 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+                    {project.details && (
+                      <div className="border-t border-white/10 pt-4">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-1">
+                          Important Details
+                        </p>
+                        <p className="text-white/50 text-sm leading-relaxed">
+                          {project.details}
+                        </p>
                       </div>
-                    </DialogDescription>
-                  </DialogHeader>
-                </DialogContent>
-              </Dialog>
+                    )}
+                  </div>
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
 
             </div>
           </div>

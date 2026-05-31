@@ -22,15 +22,15 @@ const CertificationsCard = ({
   description: string
 }) => {
   return (
-    <div className="h-full p-4 flex">
+    <div className="p-4 min-h-sm max-h-xl">
       <Dialog>
         <DialogTrigger className="border-2 rounded-lg p-4 hover:cursor-pointer hover:border-cyan-500 transition duration-300">
           <Image
             src={certBadgeImgSrc}
-            width={500}
-            height={500}
+            width={200}
+            height={200}
             alt="Certificate Badge Image"
-            className="h-auto w-full object-contain"
+            className="object-contain"
           />
         </DialogTrigger>
 
@@ -40,7 +40,7 @@ const CertificationsCard = ({
             !max-w-6xl
             lg:h-[90vh]
             p-0
-            bg-blue-700/90
+            bg-blue-500/90
             text-white
             flex
             flex-col
