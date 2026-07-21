@@ -22,9 +22,6 @@ const ProjectCard = ({ project }: { project: any }) => {
   const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsActive(false);
   };
-  // Source - https://stackoverflow.com/a/63627688
-// Posted by Gibolt, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-05-31, License - CC BY-SA 4.0
 
   const openInNewTab = (url: string) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -33,10 +30,10 @@ const ProjectCard = ({ project }: { project: any }) => {
 
   return (
     <div
-      className={`w-full lg:h-[70vh] h-[40vh] mb-10 ${isActive ? "cursor-grabbing" : "cursor-grab" }`} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}
+      className={`relative w-full lg:h-[70vh] h-[40vh] mb-10 ${isActive ? "cursor-grabbing" : "cursor-grab" }`} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}
     >
         <div className="absolute inset-0 backface-hidden rounded-2xl p-[2px] bg-gradient-to-r from-blue-800 via-blue-500 to-blue-400 animate-gradient">
-          <div className="h-full w-full rounded-2xl p-6 flex flex-col">
+          <div className="h-full w-full rounded-2xl p-6 flex flex-col overflow-y-auto overflow-x-hidden">
             
             {/* Title */}
             <div className="flex flex-row justify-between w-full lg:p-2">
