@@ -1,22 +1,5 @@
 import LightningRod from "@/components/coding/LightningRod";
-
-const educationData = [
-    {
-      "degree": "MSc Cybersecurity",
-      "institution": "Munster Technological University",
-      "location": "Cork, Ireland",
-      "duration": "2026 - 2027",
-      "description": "Specializing in cybersecurity, cloud security, and defensive operations."
-    },
-    {
-      "degree": "BTech Computer Science and Engineering",
-      "institution": "Vellore Institute of Technology",
-      "location": "Vellore, India",
-      "duration": "2022 - 2026",
-      "grade": "CGPA: 9.02",
-      "description": "Published research in IEEE Access and presented work on post-quantum cryptography."
-    }
-]
+import { educationData } from "@/data/codingData";
 
 const Education = () => {
   return (

@@ -1,13 +1,5 @@
 import CertificationsCard from '@/components/coding/contentComponents/certifications/CertificationsCard'
-const certifications = [
-  {
-    title: "AWS Cloud Practitioner",
-    description:
-      "The AWS Cloud Practitioner certification deals with understanding the AWS Cloud ecosystem",
-    pdfSrc: "/Certifications/pdfs/AWSCP.pdf",
-    certBadgeImgSrc: "/Certifications/AWSCP.png",
-  },
-];
+import { certifications } from '@/data/codingData';
 
 const Certifications = () => {
   return (

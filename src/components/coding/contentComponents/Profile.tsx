@@ -73,16 +73,16 @@ const Profile = () => {
         </h2>
   
         {/* Quick Stats */}
-        <div className="flex flex-wrap gap-3 mb-6 lg:block hidden">
-          <span className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
+        <div className="flex flex-wrap gap-2 mb-6 lg:block hidden">
+          <span className="mr-2 px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
             IEEE Access Published
           </span>
 
-          <span className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
+          <span className="mr-2 px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
             Post-Quantum Cryptography
           </span>
 
-          <span className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
+          <span className="mr-2 px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
             Cloud Security
           </span>
         </div>
@@ -117,7 +117,7 @@ const Profile = () => {
         <div className="flex flex-wrap gap-4 mt-8">
 
           <a
-            href="mailto:achintyanigam2@gmail.com"
+            href="mailto:achintyanigam2@example.com"
             className="
               flex items-center gap-3
               justify-center

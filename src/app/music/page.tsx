@@ -7,7 +7,7 @@ import GenreSummary from "@/components/music/GenreSummary";
 import AlbumSection from "@/components/music/AlbumSection";
 import VideoSection from "@/components/music/VideoSection";
 import AudioPlayer from "@/components/music/AudioPlayer";
-import { tracks } from "@/components/music/data";
+import { tracks } from "@/data/musicData";
 
 export default function MusicPage() {
   const [currentTrackId, setCurrentTrackId] = useState<number | null>(null);

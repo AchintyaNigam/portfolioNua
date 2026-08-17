@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'motion/react';
-import { platforms } from './data';
+import { platforms } from '@/data/musicData';
 import { Headphones, ExternalLink } from 'lucide-react';
 
 export default function GenreSummary() {

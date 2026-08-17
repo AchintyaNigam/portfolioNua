@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX } from "lucide-react";
-import { tracks } from "./data";
+import { tracks } from "@/data/musicData";
 
 export default function AudioPlayer({ 
   currentTrackId, 

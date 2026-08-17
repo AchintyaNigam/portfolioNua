@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Play } from "lucide-react";
-import { albums, tracks } from "./data";
+import { albums, tracks } from "@/data/musicData";
 
 export default function AlbumSection({ onPlayTrack }: { onPlayTrack?: (trackId: number) => void }) {
   // We'll just map clicking an album to playing the first track for now, 

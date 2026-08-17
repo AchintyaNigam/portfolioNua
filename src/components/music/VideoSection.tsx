@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Play } from "lucide-react";
-import { videos } from "./data";
+import { videos } from "@/data/musicData";
 
 export default function VideoSection() {
   return (
