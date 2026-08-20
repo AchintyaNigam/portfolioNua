@@ -11,7 +11,6 @@ import Certifications from "@/components/coding/contentComponents/Certifications
 import Education from "@/components/coding/contentComponents/Education";
 
 import { Particles } from "@/components/magicui/particles";
-import { VideoText } from "@/components/magicui/video-text";
 
 const sections = [
   { id: "projects", title: "Projects", content: <Projects /> },
@@ -83,26 +82,6 @@ const Content = () => {
         refresh
       />
 
-      {/*   <div className="absolute inset-0 mt-18 w-screen">
-              <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.2 }}
-          style = {{opacity}}
-        >
-        <div className="lg:block hidden">
-           <h1 className="relative lg:h-[30vh] h-[10vh] w-full opacity-80">
-             <VideoText
-               src="videos/abstractBlue.mp4"
-               imageSrc="metallicTexture.png"
-               fontSize={5}
-               >
-                SECURITY AND ENGINEERING
-             </VideoText>
-           </h1>
-        </div>
-        </motion.div>
-      </div> */}
       <div className="z-10 pb-28">
         <div className="lg:mt-18">
         <Profile />

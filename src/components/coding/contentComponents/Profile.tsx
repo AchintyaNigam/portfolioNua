@@ -1,16 +1,41 @@
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { FaGithub, FaLinkedin, FaDownload, FaEnvelope } from "react-icons/fa";
 
 import MeCoding from '../../../../public/MeCoding.jpg';
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.2 },
+  },
+};
+
 const Profile = () => {
   return (
-    <div className='flex flex-row mb-26'>
+    <motion.div 
+      className='flex flex-row mb-26'
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
 
       {/* Profile Image */}
-      <div className=''>
+      <motion.div variants={itemVariants} className=''>
         <div className='lg:block hidden rounded-xl overflow-hidden w-90 h-full object-fill border-4 border-blue-300 shadow-photo-glow'>
           <Image
             src={MeCoding}
@@ -20,12 +45,12 @@ const Profile = () => {
             className='object-cover h-full w-full'
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className='flex lg:pl-18 flex-col text-white justify-center'>
         {/*Social Links Mobile */}
-        <div className="flex gap-5 mt-6 text-4xl lg:hidden block">
+        <motion.div variants={itemVariants} className="flex gap-5 mt-6 text-4xl lg:hidden block">
           <a
             href="https://www.linkedin.com/in/achintya-nigam-5a1558251/"
             target="_blank"
@@ -42,8 +67,9 @@ const Profile = () => {
           >
             <FaGithub />
           </a>
-        </div>
-        <div className='flex gap-5 justify-between'>
+        </motion.div>
+        
+        <motion.div variants={itemVariants} className='flex gap-5 justify-between'>
           <h1 className='lg:text-7xl text-4xl font-bold pt-4'>
             Achintya Nigam
           </h1>
@@ -66,14 +92,14 @@ const Profile = () => {
               <FaGithub />
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <h2 className='py-4 lg:text-2xl text-xl text-gray-400'>
+        <motion.h2 variants={itemVariants} className='py-4 lg:text-2xl text-xl text-gray-400'>
           Mumbai, India
-        </h2>
+        </motion.h2>
   
         {/* Quick Stats */}
-        <div className="flex flex-wrap gap-2 mb-6 lg:block hidden">
+        <motion.div variants={itemVariants} className="flex flex-wrap gap-2 mb-6 lg:block hidden">
           <span className="mr-2 px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
             IEEE Access Published
           </span>
@@ -85,15 +111,15 @@ const Profile = () => {
           <span className="mr-2 px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
             Cloud Security
           </span>
-        </div>
+        </motion.div>
 
-        <ul className="font-mono text-white lg:text-xl text-sm">
+        <motion.ul variants={itemVariants} className="font-mono text-white lg:text-xl text-sm">
           <li>&#8226; Cryptography researcher and developer</li>
           <li>&#8226; IEEE Access published, post-quantum cryptography</li>
           <li>&#8226; Cloud security, SOC operations, full-stack development</li>
-        </ul>
+        </motion.ul>
 
-        <p className='font-mono lg:text-xl text-sm leading-relaxed'>
+        <motion.p variants={itemVariants} className='font-mono lg:text-xl text-sm leading-relaxed'>
           <br />
           I'm a cryptography researcher and full-stack developer heading to
           MTU Cork for my MSc, with a background that spans security research,
@@ -111,10 +137,10 @@ const Profile = () => {
           These days I'm focused on cloud security and defensive operations,
           and I believe the best security professionals understand both how
           to build things and how to break them.
-        </p>
+        </motion.p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 mt-8">
+        <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-8">
 
           <a
             href="mailto:achintyanigam2@example.com"
@@ -159,13 +185,13 @@ const Profile = () => {
             Download Resume
           </a>
 
-        </div>
-
+        </motion.div>
 
       </div>
 
-    </div>
+    </motion.div>
   );
 };
 
 export default Profile;
+

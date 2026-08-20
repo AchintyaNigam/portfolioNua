@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { VideoText } from "@/components/magicui/video-text";
 
 import SubHeading from "@/components/coding/SubHeading";
 import LightningRod from "@/components/coding/LightningRod";
