@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Test Video (YouTube)",
+    "youtubeId": "ThNBLEQR-NQ",
+    "views": "1.2M views",
+    "color": "from-red-500 to-orange-600"
+  },
+  {
+    "id": 2,
+    "title": "Neon Nights (Live at The Roxy)",
+    "youtubeId": "ThNBLEQR-NQ",
+    "views": "850K views",
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": 3,
+    "title": "Solar Drift (Acoustic Cover)",
+    "youtubeId": "ThNBLEQR-NQ",
+    "views": "420K views",
+    "color": "from-emerald-500 to-teal-600"
+  }
+]

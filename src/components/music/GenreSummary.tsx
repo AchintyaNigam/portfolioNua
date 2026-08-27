@@ -15,12 +15,10 @@ export default function GenreSummary() {
       >
         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 flex items-center gap-4">
           <Headphones className="text-sky-400" size={40} />
-          Sonic Landscape
+          Achintya Nigam
         </h2>
         <p className="text-zinc-300 text-lg md:text-xl leading-relaxed mb-8 drop-shadow-md bg-zinc-950/40 p-6 rounded-2xl backdrop-blur-sm border border-zinc-800/50">
-          My music is a blend of ambient soundscapes, synthwave energy, and acoustic storytelling. 
-          I explore the space between organic instrumentation and electronic textures, aiming to create 
-          immersive experiences that resonate on an emotional level.
+          I believe in being versatile with my music, but I majorly make electronic, rap music, orchestral, and sometimes a little mix of everything. I use Flstudio as my DAW and the guitar as the instrument to compose on. 
         </p>
         
         <div className="flex flex-wrap gap-4">

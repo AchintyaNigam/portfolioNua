@@ -13,7 +13,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="z-100 w-full bg-gradient-to-r lg:px-32 px-4 from-sky-600 to-sky-800 text-white text-bold shadow-black drop-shadow-2xl">
+    <div className="relative z-50 w-full bg-gradient-to-r lg:px-32 px-4 from-sky-600 to-sky-800 text-white text-bold shadow-black drop-shadow-2xl">
       <div className="flex items-center justify-between lg:px-0 px-4 py-3 ">
         {/* Logo */}
         <Link href="/">

@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX } from "lucide-react";
 import { tracks } from "@/data/musicData";
 
+import { DashRing } from "@/components/loading-ui/dash-ring";
+
 export default function AudioPlayer({ 
   currentTrackId, 
   onNext, 
@@ -13,6 +15,7 @@ export default function AudioPlayer({
   onPrev: () => void 
 }) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
@@ -23,14 +26,21 @@ export default function AudioPlayer({
 
   useEffect(() => {
     if (audioRef.current && currentTrackId !== null) {
-      audioRef.current.play().then(() => setIsPlaying(true)).catch(e => console.error("Playback failed:", e));
+      setIsLoading(true);
+      audioRef.current.play().then(() => setIsPlaying(true)).catch(e => {
+        console.error("Playback failed:", e);
+        setIsLoading(false);
+      });
     }
   }, [currentTrackId]);
 
   useEffect(() => {
     if (audioRef.current && currentTrackId !== null) {
       if (isPlaying) {
-        audioRef.current.play().catch(e => console.error("Playback failed:", e));
+        audioRef.current.play().catch(e => {
+          console.error("Playback failed:", e);
+          setIsPlaying(false);
+        });
       } else {
         audioRef.current.pause();
       }
@@ -88,6 +98,9 @@ export default function AudioPlayer({
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleTimeUpdate}
         onEnded={onNext}
+        onWaiting={() => setIsLoading(true)}
+        onCanPlay={() => setIsLoading(false)}
+        onPlaying={() => setIsLoading(false)}
       />
       
       {/* Now Playing Info */}
@@ -111,7 +124,13 @@ export default function AudioPlayer({
             className="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:scale-105 transition-transform shadow-md"
             onClick={togglePlay}
           >
-            {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-1" />}
+            {isLoading ? (
+              <DashRing className="w-5 h-5 text-black" />
+            ) : isPlaying ? (
+              <Pause size={20} fill="currentColor" />
+            ) : (
+              <Play size={20} fill="currentColor" className="ml-1" />
+            )}
           </button>
           <button onClick={onNext} className="text-zinc-400 hover:text-white transition-colors"><SkipForward size={24} fill="currentColor" /></button>
         </div>
