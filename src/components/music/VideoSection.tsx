@@ -52,9 +52,6 @@ export default function VideoSection() {
               <h3 className="font-semibold text-zinc-100 truncate mb-1">
                 {video.title}
               </h3>
-              <p className="text-sm text-zinc-400 font-medium">
-                {video.views}
-              </p>
             </DialogTrigger>
 
             <DialogContent className="max-w-6xl sm:max-w-6xl w-[95vw] p-0 bg-zinc-950 border-zinc-800 text-white overflow-hidden rounded-xl">

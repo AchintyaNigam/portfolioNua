@@ -58,6 +58,10 @@ const Navbar = () => {
               exit={{ y: -100, opacity: 0 }}
               transition={{ duration: 0.1, delay: 0 }}
               className="text-button cursor-pointer"
+              onClick={() => {
+                router.push("/music");
+                setMenuOpen(false);
+              }}
             >
               MUSIC
             </motion.div>
@@ -80,6 +84,10 @@ const Navbar = () => {
               exit={{ y: -100, opacity: 0 }}
               transition={{ duration: 0.1, delay: 0.2 }}
               className="text-button cursor-pointer"
+              onClick={() => {
+                router.push("/literature");
+                setMenuOpen(false);
+              }}
             >
               LITERATURE
             </motion.div>

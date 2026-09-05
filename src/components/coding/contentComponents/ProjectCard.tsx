@@ -37,7 +37,7 @@ const ProjectCard = ({ project }: { project: any }) => {
             
             {/* Title */}
             <div className="flex flex-row justify-between w-full lg:p-2">
-              <h1 className="lg:text-6xl text-2xl text-whitefont-bold">
+              <h1 className="lg:text-4xl text-2xl text-whitefont-bold">
                 {project.title}
               </h1>
               <div className="hover:cursor-pointer hover:text-blue-200" onClick={() => openInNewTab(project.link)}>

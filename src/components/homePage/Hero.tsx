@@ -38,11 +38,8 @@ const Hero = ({ handleScrollDownClick }: { handleScrollDownClick: () => void }) 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const firstName = "ACHINTYA";
 
-    const audio = new Audio("/typewriter.mp3");
-
     const animateName = () => {
       if (!h1) return;
-      audio.play();
 
       let iterations = 0;
       const interval = setInterval(() => {
@@ -66,12 +63,12 @@ const Hero = ({ handleScrollDownClick }: { handleScrollDownClick: () => void }) 
     };
 
     if (h1 && h2 && space) {
-      // 👇 Add click listeners
+      // Add click listeners
       h1.addEventListener("click", animateName);
       h2.addEventListener("click", animateName);
       space.addEventListener("click", animateName);
 
-      // 👇 Animate immediately on page load
+      // Animate immediately on page load
       animateName();
     }
 

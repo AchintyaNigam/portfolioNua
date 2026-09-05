@@ -72,8 +72,7 @@ export const videos = [
 ];
 
 export const platforms = [
-  { id: 1, name: "Spotify", icon: "spotify", url: "#" },
-  { id: 2, name: "Apple Music", icon: "apple", url: "#" },
-  { id: 3, name: "YouTube", icon: "youtube", url: "#" },
-  { id: 4, name: "SoundCloud", icon: "soundcloud", url: "#" },
+  { id: 1, name: "Spotify", icon: "spotify", url: "https://open.spotify.com/artist/56pgF9P3XK02tVi8TUfBgd?si=fPzUTVEdT32M9e5UPY5zNw" },
+  { id: 2, name: "Apple Music", icon: "applemusic", url: "https://music.apple.com/us/artist/achintya-nigam/1436772859" },
+  { id: 3, name: "YouTube", icon: "youtubemusic", url: "https://music.youtube.com/channel/UC7H1brOVp7NN80pfbVQ5oVQ" },
 ];

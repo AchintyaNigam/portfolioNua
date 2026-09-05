@@ -70,7 +70,7 @@ const Profile = () => {
         </motion.div>
         
         <motion.div variants={itemVariants} className='flex gap-5 justify-between'>
-          <h1 className='lg:text-7xl text-4xl font-bold pt-4'>
+          <h1 className='lg:text-5xl text-3xl font-bold pt-4'>
             Achintya Nigam
           </h1>
           {/* Social Links Desktop */}
