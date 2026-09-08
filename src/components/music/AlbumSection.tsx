@@ -24,7 +24,7 @@ export default function AlbumSection({ onPlayTrack }: { onPlayTrack?: (trackId: 
       </motion.div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {albums.map((album, index) => (
+        {albums.reverse().map((album, index) => (
           <Dialog key={album.id}>
             <DialogTrigger
               render={
@@ -64,14 +64,14 @@ export default function AlbumSection({ onPlayTrack }: { onPlayTrack?: (trackId: 
                 {album.title}
               </h3>
               <p className="text-sm text-zinc-400 font-medium">
-                {album.year} • Album
+                {album.year} • {album.typeOf}
               </p>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] bg-zinc-950 border-zinc-800 text-white">
               <DialogHeader>
                 <DialogTitle>{album.title}</DialogTitle>
                 <DialogDescription className="text-zinc-400">
-                  Album Tracks
+                Track{album.typeOf == "Single" ? "" : "s"}
                 </DialogDescription>
               </DialogHeader>
               <div className="flex flex-col gap-1 mt-4">
