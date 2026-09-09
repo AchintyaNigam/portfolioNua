@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Play } from "lucide-react";
 import videoData from "@/data/videoData.json";
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Backlight } from "@/components/ui/backlight"
 
 export default function VideoSection() {
   return (
@@ -58,6 +59,7 @@ export default function VideoSection() {
               <DialogHeader className="p-4 pb-0 absolute top-0 left-0 w-full z-10 pointer-events-none opacity-0">
                 <DialogTitle>{video.title}</DialogTitle>
               </DialogHeader>
+              <Backlight blur={100} className="w-full">
               <div className="relative w-full aspect-video bg-black rounded-xl overflow-hidden">
                 <iframe
                   className="absolute inset-0 w-full h-full"
@@ -68,6 +70,7 @@ export default function VideoSection() {
                   allowFullScreen
                 ></iframe>
               </div>
+              </Backlight>
             </DialogContent>
           </Dialog>
         ))}
