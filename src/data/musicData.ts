@@ -43,6 +43,41 @@ export const albums: Album[] = [
       { id: 301, title: "Jupiter on brink", artist: "Achintya Nigam", albumId: 3, audioSrc: "/music/audioTracks/Jupiter on brink.mp3", duration: "4:21", coverSrc: "/music/albumArt/JupiterOnBrink.png" },
     ]
   },
+  {
+    id: 4, title: "Experimental Obessions", typeOf: "Album", year: "2024", color: "from-purple-500 to-indigo-600", coverSrc: "/music/albumArt/ExperimentalObsessions.png",
+    tracks: [
+      {
+        id: 401, title: "Unstable", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/Unstable.mp3", duration: "2:12", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 402, title: "Humanity", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/Humanity.mp3", duration: "2:10", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 403, title: "Rebels", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/Rebels.mp3", duration: "3:00", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 404, title: "The Stars Come Out", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/The Stars Come Out.mp3", duration: "2:20", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 405, title: "Digging To Outer Space", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/Digging To Outer Space.mp3", duration: "3:12", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 406, title: "Another War", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/Another War.mp3", duration: "3:17", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 407, title: "The Final Battle", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/The Final Battle.mp3", duration: "2:22", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 408, title: "End Of The World", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/End Of The World.mp3", duration: "2:51", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 409, title: "The Beginning", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/The Beginning.mp3", duration: "5:42", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      },
+      {
+        id: 410, title: "Weird Flowers", artist: "Achintya Nigam", albumId: 4, audioSrc: "/music/audioTracks/ExperimentalObsessions/Weird Flowers.mp3", duration: "5:42", coverSrc: "/music/albumArt/ExperimentalObsessions.png"
+      }
+    ]
+  },
 ];
 
 export const tracks: Track[] = albums.flatMap(a => a.tracks);
