@@ -78,6 +78,54 @@ export const albums: Album[] = [
       }
     ]
   },
+  {
+    id: 5, title: "7PM", typeOf: "Single", year: "2026", color: "from-purple-500 to-indigo-600", coverSrc: "/music/albumArt/7pm.png",
+    tracks: 
+    [
+      {
+          id: 501, title: "7PM", artist: "AM$H, Achintya Nigam", albumId: 5, audioSrc: "/music/audioTracks/7PM.mp3", duration: "1:46", coverSrc: "/music/albumArt/7pm.png"
+
+      }
+    ]
+  },
+  {
+    id: 6, title: "Not Anymore", typeOf: "Single", year: "2026", color: "from-purple-500 to-indigo-600", coverSrc: "/music/albumArt/NotAnymore.png",
+    tracks: 
+    [
+      {
+          id: 601, title: "7PM", artist: "AM$H, Achintya Nigam", albumId: 6, audioSrc: "/music/audioTracks/Not Anymore.mp3", duration: "3:13", coverSrc: "/music/albumArt/NotAnymore.png"
+
+      }
+    ]
+  },
+  {
+    id: 7, title: "Payload", typeOf: "Single", year: "2026", color: "from-purple-500 to-indigo-600", coverSrc: "/music/albumArt/Payload.png",
+    tracks: 
+    [
+      {
+          id: 701, title: "Payload", artist: "AM$H, Achintya Nigam", albumId: 7, audioSrc: "/music/audioTracks/Payload.mp3", duration: "2:31", coverSrc: "/music/albumArt/Payload.png"
+
+      }
+    ]
+  },
+  {
+    id: 8, title: "Dilruba", typeOf: "Single", year: "2026", color: "from-purple-500 to-indigo-600", coverSrc: "/music/albumArt/Dilruba.png",
+    tracks: 
+    [
+      {
+          id: 801, title: "Dilruba", artist: "AM$H, RIYA, Achintya Nigam", albumId: 8, audioSrc: "/music/audioTracks/Dilruba.mp3", duration: "2:57", coverSrc: "/music/albumArt/Dilruba.png"
+      }
+    ]
+  },
+  {
+    id: 9, title: "Dilruba", typeOf: "Single", year: "2026", color: "from-purple-500 to-indigo-600", coverSrc: "/music/albumArt/Doomsday.png",
+    tracks: 
+    [
+      {
+          id: 901, title: "Dilruba", artist: "AM$H, Achintya Nigam", albumId: 9, audioSrc: "/music/audioTracks/Doomsday.mp3", duration: "2:50", coverSrc: "/music/albumArt/Doomsday.png"
+      }
+    ]
+  },
 ];
 
 export const tracks: Track[] = albums.flatMap(a => a.tracks);
