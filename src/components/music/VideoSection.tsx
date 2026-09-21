@@ -41,7 +41,7 @@ export default function VideoSection() {
               <div className="relative w-full aspect-video rounded-md shadow-[0_8px_24px_rgba(0,0,0,0.5)] mb-4 overflow-hidden bg-zinc-900">
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                  style={{ backgroundImage: `url('https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg')` }}
+                  style={{ backgroundImage: `url('https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg')` }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-br ${video.color} opacity-40 group-hover:opacity-20 transition-opacity duration-300`} />
                 <div className="absolute inset-0 flex items-center justify-center">

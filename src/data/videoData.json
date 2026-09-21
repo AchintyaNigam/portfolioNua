@@ -1,20 +1,26 @@
 [
   {
     "id": 1,
-    "title": "Test Video (YouTube)",
-    "youtubeId": "ThNBLEQR-NQ",
+    "title": "Coldplay - Hurts Like Heaven (cover)",
+    "youtubeId": "mOCidcRKrt4",
     "color": "from-red-500 to-orange-600"
   },
   {
     "id": 2,
-    "title": "Neon Nights (Live at The Roxy)",
-    "youtubeId": "ThNBLEQR-NQ",
+    "title": "The Big Crunch (Remastered)",
+    "youtubeId": "pu1lPVjNy2U",
     "color": "from-blue-500 to-cyan-600"
   },
   {
     "id": 3,
-    "title": "Solar Drift (Acoustic Cover)",
-    "youtubeId": "ThNBLEQR-NQ",
+    "title": "Tim Henson Improv Cover",
+    "youtubeId": "Wn9expYhe8E",
     "color": "from-emerald-500 to-teal-600"
+  },
+  {
+    "id": 5,
+    "title": "Sweet Child O mine (Cover)",
+    "youtubeId": "v4cjnzYBiQo",
+    "color": "from-red-500 to-orange-600"
   }
 ]
