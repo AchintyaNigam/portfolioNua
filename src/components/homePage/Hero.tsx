@@ -3,11 +3,15 @@ import { animate } from "framer-motion";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import DraggableMe from "@/components/homePage/Draggable";
 import Socials from "@/components/Socials";
+import AlbumModal from "./AlbumModal";
+
 
 const Hero = ({ handleScrollDownClick }: { handleScrollDownClick: () => void }) => {
   const [bgColr1, setBgColr1] = useState("#03bafc");
   const [bgColr2, setBgColr2] = useState("#034efc");
   const [h1Done, setH1Done] = useState(false);
+  const [isAlbumOpen, setIsAlbumOpen] = useState(false);
+
 
   useEffect(() => {
     const animation1 = animate("#03bafc", "#8003fc", {
@@ -119,7 +123,10 @@ const Hero = ({ handleScrollDownClick }: { handleScrollDownClick: () => void }) 
       <div className="flex flex-col items-center justify-center h-screen text-white">
         <div className="lg:text-8xl font-serif italic text-2xl">I am</div>
 
-        <div className="mt-4 lg:text-9xl font-mono font-bold hover:tracking-widest duration-300 hover:cursor-pointer flex flex-row text-3xl">
+        <div 
+          className="mt-4 lg:text-9xl font-mono font-bold hover:tracking-widest duration-300 hover:cursor-pointer flex flex-row text-3xl"
+          onClick={() => setIsAlbumOpen(true)}
+        >
           <h1 id="h1">ACHINTYA</h1>
           <h1 id="space">&nbsp;</h1>
           <h1 id="h2">NIGAM</h1>
@@ -145,6 +152,8 @@ const Hero = ({ handleScrollDownClick }: { handleScrollDownClick: () => void }) 
           <IoIosArrowDropdownCircle />
         </div>
       </div>
+
+      <AlbumModal isOpen={isAlbumOpen} onClose={() => setIsAlbumOpen(false)} />
     </div>
   );
 };
