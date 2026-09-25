@@ -5,7 +5,7 @@ export const columns = [
     subtitle: 'All my music in one place',
     color: 'from-purple-600 to-pink-600',
     link: '/music',
-    gif: '/videos/guitar.gif'
+    gif: '/videos/MusicGif.gif'
   },
   {
     id: 2,
