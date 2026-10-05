@@ -95,7 +95,7 @@ const Profile = () => {
         </motion.div>
 
         <motion.h2 variants={itemVariants} className='py-4 lg:text-2xl text-xl text-gray-400'>
-          Mumbai, India
+          Cork, Ireland
         </motion.h2>
   
         {/* Quick Stats */}
@@ -121,8 +121,8 @@ const Profile = () => {
 
         <motion.p variants={itemVariants} className='font-mono lg:text-xl text-sm leading-relaxed'>
           <br />
-          I'm a cryptography researcher and full-stack developer heading to
-          MTU Cork for my MSc, with a background that spans security research,
+          I'm a cryptography researcher and full-stack studying at
+          MTU Cork for my MSc in Cybersecurity, with a background that spans security research,
           software development, and hands-on threat detection.
 
           During my bachelors, I published research on post-quantum cryptography

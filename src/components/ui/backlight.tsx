@@ -11,6 +11,7 @@ export function Backlight({ blur = 20, children, className }: BacklightProps) {
 
   return (
     <div className={className}>
+      <div className="pointer-events-none">
       <svg width="0" height="0" aria-hidden="true">
         <filter id={id} y="-50%" x="-50%" width="200%" height="200%">
           <feGaussianBlur
@@ -26,6 +27,7 @@ export function Backlight({ blur = 20, children, className }: BacklightProps) {
           <feComposite in="SourceGraphic" operator="over"></feComposite>
         </filter>
       </svg>
+      </div>
 
       <div style={{ filter: `url(#${id})` }}>{children}</div>
     </div>
