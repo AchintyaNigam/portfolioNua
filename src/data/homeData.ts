@@ -13,7 +13,7 @@ export const columns = [
     subtitle: 'Learn about my work',
     color: 'from-blue-600 to-cyan-600',
     link: '/security-engineering',
-    gif: '/videos/cat.gif'
+    gif: '/videos/EngGif.gif'
   },
   {
     id: 3,
@@ -21,6 +21,6 @@ export const columns = [
     subtitle: 'Novels, Blogs, Research',
     color: 'from-orange-600 to-red-600',
     link: '/literature',
-    gif: '/videos/read.gif'
+    gif: '/videos/LiteratureGif.gif'
   }
 ];
