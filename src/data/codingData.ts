@@ -1,17 +1,18 @@
+//For certifications, place newer ones first
 export const certifications = [
-  {
-    title: "AWS Cloud Practitioner",
-    description:
-      "The AWS Cloud Practitioner certification deals with understanding the AWS Cloud ecosystem",
-    pdfSrc: "/Certifications/pdfs/AWSCP.pdf",
-    certBadgeImgSrc: "/Certifications/AWSCP.png",
-  },
   {
     title: "AWS Solutions Architect Associate",
     description:
       "The holder of an AWS Solution Architect Associate certificate is proficient in designing scalable and secure cloud architectures using AWS services.",
     pdfSrc: "/Certifications/pdfs/AWSSAA.pdf",
     certBadgeImgSrc: "/Certifications/AWSSAA.png",
+  },
+  {
+    title: "AWS Cloud Practitioner",
+    description:
+      "The AWS Cloud Practitioner certification deals with understanding the AWS Cloud ecosystem",
+    pdfSrc: "/Certifications/pdfs/AWSCP.pdf",
+    certBadgeImgSrc: "/Certifications/AWSCP.png",
   },
 ];
 
