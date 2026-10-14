@@ -46,7 +46,7 @@ export const experiences = [
     id: "exp2",
     title: "Frontend Developer Intern",
     company: "Independ",
-    date: "August, 2024 - November, 2024",
+    date: "July, 2024 - November, 2024",
     description: "Developed dynamic and visually engaging frontend web pages using React.js, Next.js, and Tailwind CSS, improving user engagement by 30% through enhanced UI/UX. Utilized Framer Motion to implement smooth animations, resulting in a 25% increase in user interaction and overall satisfaction, while reducing page load time by 15% through optimized animations performance.experience"
   },
   {
